@@ -6,8 +6,8 @@ The base URL is `http://localhost:[port_number]/api/users` . To represent CRUD, 
 ```
 [
 {
- "username": string,
- "password": string
+ username: string,
+ password: string
 },
 ...
 ]
