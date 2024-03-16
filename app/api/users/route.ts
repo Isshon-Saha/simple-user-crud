@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { unstable_noStore as noStore } from "next/cache";
 
 import type { User } from "@/util/types";
 
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
  * @return {Promise<NextResponse>} A JSON response with the user list
  */
 export async function GET() {
+	noStore();
 	try {
 		return NextResponse.json(userList, { status: 200 });
 	} catch (err) {
